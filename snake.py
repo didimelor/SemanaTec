@@ -52,6 +52,8 @@ def move():
     for body in snake:
         #Assign the snake the second color from the shuffled colors array
         square(body.x, body.y, 9, colors[1])
+    #Move food
+    move_food()
     #Assign the food the first color from the shuffled colors array
     square(food.x, food.y, 9, colors[0])
     update()
