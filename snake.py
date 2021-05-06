@@ -14,6 +14,7 @@ import random
 food = vector(0, 0)
 snake = [vector(10, 0)]
 aim = vector(0, -10)
+#Array to shuffle and set to the snake and food
 colors = ['yellow', 'pink', 'green', 'purple', 'blue']
 random.shuffle(colors)
 
@@ -48,8 +49,9 @@ def move():
     clear()
 
     for body in snake:
+        #Assign the snake the second color from the shuffled colors array
         square(body.x, body.y, 9, colors[1])
-
+    #Assign the food the first color from the shuffled colors array
     square(food.x, food.y, 9, colors[0])
     update()
     ontimer(move, 100)
