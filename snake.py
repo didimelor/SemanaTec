@@ -1,4 +1,5 @@
 """
+Snake game
 Diana Karen Melo Reyes A01023785
 Javier Perdomo
 We will be adding features to the code retrieved from: http://www.grantjenks.com/docs/freegames/snake.html
@@ -8,10 +9,13 @@ We will be adding features to the code retrieved from: http://www.grantjenks.com
 from turtle import *
 from random import randrange
 from freegames import square, vector
+import random
 
 food = vector(0, 0)
 snake = [vector(10, 0)]
 aim = vector(0, -10)
+colors = ['yellow', 'pink', 'green', 'purple', 'blue']
+random.shuffle(colors)
 
 def change(x, y):
     "Change snake direction."
@@ -44,9 +48,9 @@ def move():
     clear()
 
     for body in snake:
-        square(body.x, body.y, 9, 'black')
+        square(body.x, body.y, 9, colors[1])
 
-    square(food.x, food.y, 9, 'green')
+    square(food.x, food.y, 9, colors[0])
     update()
     ontimer(move, 100)
 
