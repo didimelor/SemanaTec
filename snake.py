@@ -1,7 +1,7 @@
 """
 Snake game
 Diana Karen Melo Reyes A01023785
-Javier Perdomo
+Javier Perdomo Gonzalez A01026933
 We will be adding features to the code retrieved from: http://www.grantjenks.com/docs/freegames/snake.html
 Features added:
     - Randomized and changed snake and food colors on start
@@ -56,6 +56,21 @@ def move():
     square(food.x, food.y, 9, colors[0])
     update()
     ontimer(move, 100)
+
+def move_food():
+    "Food must randomly move one step at a time, without exiting boundaries"
+    "New food position"
+    new_food_pos_x = randrange(-1,1) * 10
+    new_food_pos_y = randrange(-1,1) * 10
+    "Check if food will leave boundaries"
+    if (new_food_pos_x == -10) and (-140 < food.x):
+        food.x = food.x + new_food_pos_x
+    if (new_food_pos_x == 10) and (food.x < 140):
+        food.x = food.x + new_food_pos_x
+    if (new_food_pos_y == -10) and (-140 < food.y):
+        food.y = food.y + new_food_pos_y
+    if (new_food_pos_y == 10) and (food.y < 140):
+        food.y = food.y + new_food_pos_y
 
 setup(420, 420, 370, 0)
 hideturtle()
