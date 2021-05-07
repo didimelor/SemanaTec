@@ -3,8 +3,9 @@ Pacman game
 Diana Karen Melo Reyes A01023785
 Javier Perdomo
 We will be adding features to the code retrieved from: http://www.grantjenks.com/docs/freegames/pacman.html
-- More intelligent ghosts
-- Faster ghosts.
+-The ghosts will be programmed to make better decisions
+-The map layout will be changed
+-The ghosts will become faster
 """
 
 from random import choice
