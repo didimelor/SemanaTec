@@ -4,7 +4,8 @@ Diana Karen Melo Reyes A01023785
 Javier Perdomo Gonzalez A01026933
 We will be adding features to the code retrieved from: http://www.grantjenks.com/docs/freegames/snake.html
 Features added:
-    - Randomized and changed snake and food colors on start
+    - Randomized and changed snake and food colors on start.
+    - Food changes place.
 """
 
 from turtle import *
