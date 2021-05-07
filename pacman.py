@@ -3,6 +3,8 @@ Pacman game
 Diana Karen Melo Reyes A01023785
 Javier Perdomo
 We will be adding features to the code retrieved from: http://www.grantjenks.com/docs/freegames/pacman.html
+- More intelligent ghosts
+- Faster ghosts.
 """
 
 from random import choice
