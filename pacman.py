@@ -131,9 +131,17 @@ def move():
                 vector(0, 10),
                 vector(0, -10),
             ]
-            plan = choice(options)
-            course.x = plan.x
-            course.y = plan.y
+            if(pacman.x > 0):
+		course.x = options[0]
+            else:
+            	course.x = options[1]
+            if(pacman.y > 0):
+            	course.y = options[2]
+            else:
+            	course.y = options[3]
+            #plan = choice(options)
+            #course.x = plan.x
+            #course.y = plan.y
 
         up()
         goto(point.x + 10, point.y + 10)
